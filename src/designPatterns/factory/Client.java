@@ -11,6 +11,5 @@ public class Client{
         Menu menu = uiFactory.createMenu();
         Button button = uiFactory.createButton();
         DropDown dropDown = uiFactory.createDropDown();
-
     }
 }
