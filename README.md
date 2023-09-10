@@ -1,1 +1,1 @@
-# LLD
+This repo contains all the Low Level Design Pattern implementations and the projects that I workd on.![LLD Design Patterns Summary](https://github.com/yashwinnagudolla/LLD/assets/143344416/74c9766f-1672-4c31-92c8-156952d4f506)
