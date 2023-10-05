@@ -1,8 +1,8 @@
 package designPatterns.singleton;
 
 public class SingletonMultiThreaded{
-    private SingletonMultiThreaded instance;
-    private count;
+    private static SingletonMultiThreaded instance;
+    private int count;
 
     private SingletonMultiThreaded(){
         this.count = 0;
@@ -10,19 +10,19 @@ public class SingletonMultiThreaded{
     }
 
     public static SingletonMultiThreaded getInstance(){
-        if(this.instance == null){
+        if(instance == null){
             synchronized (SingletonMultiThreaded.class){
-                if(this.instance == null){
-                    this.instance = new SingletonMultiThreaded();
+                if(instance == null){
+                    instance = new SingletonMultiThreaded();
                 }
             }
         }
-        return this.isntance;
+        return isntance;
     }
 
     public void makeConnection(){
-        if(connections < 10){
-            connections++;
+        if(count < 10){
+            count++;
             System.out.println("True");
         }else{
             System.out.println("Flase");

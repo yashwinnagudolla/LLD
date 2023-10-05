@@ -2,7 +2,7 @@ package designPatterns.singleton;
 
 public class Singleton{
     //private instance variable to hold the object
-    private Singleton instance;
+    private static Singleton instance;
     private int connections;
     //private constructor
     private Singleton(){
@@ -12,7 +12,7 @@ public class Singleton{
     //public static method to call the constructor
     public static Singleton getInstance(){
         if(instance == null){
-            this.instance = new Singleton();
+            instance = new Singleton();
         }
         return instance;
     }
