@@ -17,7 +17,7 @@ public class SingletonMultiThreaded{
                 }
             }
         }
-        return isntance;
+        return instance;
     }
 
     public void makeConnection(){

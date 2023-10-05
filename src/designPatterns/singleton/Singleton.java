@@ -1,15 +1,12 @@
 package designPatterns.singleton;
 
-public class Singleton{
-    //private instance variable to hold the object
+class Singleton{
     private static Singleton instance;
-    private int connections;
-    //private constructor
-    private Singleton(){
-        connections = 0;
+    private int count;
 
+    private Singleton(){
+        count = 0;
     }
-    //public static method to call the constructor
     public static Singleton getInstance(){
         if(instance == null){
             instance = new Singleton();
@@ -18,11 +15,10 @@ public class Singleton{
     }
 
     public void makeConnection(){
-        if(connections < 10){
-            connections++;
-            System.out.println("True");
+        if(count > 3){
+            System.out.println("Connection limit exceeded");
         }else{
-            System.out.println("Flase");
+            System.out.println("Connection succeeded");
         }
     }
 }
